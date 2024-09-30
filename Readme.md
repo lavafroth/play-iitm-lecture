@@ -40,6 +40,10 @@ If you don't trust running random scripts, follow these steps:
 - Copy it to `~/.local/share/applications`
 - Register the XDG handler using `xdg-mime default iitm-scheme-handler.desktop x-scheme-handler/iitm`
 
+### Usage
+
+`Shift + Right Click` on a lecture video > `Click` "open lecture in mpv"
+
 ## License
 
 Licensed under the EUPL-1.2-or-later

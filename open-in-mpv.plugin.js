@@ -1,6 +1,6 @@
 /**
  * @name open in mpv
- * @author binarynoise
+ * @author binarynoise, lavafroth
  * @description Use the context menu to open a video in mpv.
  * @version 2.1.1
  */
@@ -29,7 +29,7 @@ function contextMenuPatch(tree, context) {
             type: "separator",
         }))
         tree.props.children.push(BdApi.ContextMenu.buildItem({
-            type: "text", label: "open in mpv", action: () => {
+            type: "text", label: "open lecture in mpv", action: () => {
                 console.log("open-in-mpv: link is " + href);
 
                 if (settings.locallyInstalledVersion && settings.locallyInstalledVersion >= desktopFileVersion) {
@@ -58,7 +58,7 @@ function contextMenuPatch(tree, context) {
 }
 
 function downloadSetup() {
-    const newWindow = window.open("https://raw.githubusercontent.com/binarynoise/open-in-mpv/main/setup.sh", "_blank", "noopener noreferrer",);
+    const newWindow = window.open("https://raw.githubusercontent.com/lavafroth/open-in-mpv/main/setup.sh", "_blank", "noopener noreferrer",);
     if (newWindow === null) { // is null because opens in external browser
         settings.locallyInstalledVersion = desktopFileVersion;
         BdApi.Data.save("open-in-mpv", "settings", settings);
