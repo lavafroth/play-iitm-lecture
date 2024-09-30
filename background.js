@@ -15,7 +15,7 @@ function createMpvSchemeURI(url) {
     const decodedURL = decodeURI(url);
     const encodedURL = encodeURI(decodedURL).replace(/'/g, "%27");
     console.debug({url, encodedURL, same: decodedURL === decodeURI(encodedURL)});
-    return `mpv://watch#${encodedURL}`;
+    return `iitm://watch#${encodedURL}`;
 }
 
 async function openInMpv(url) {
@@ -76,7 +76,7 @@ function askToInstall() {
 
 const filter = {
     url: [{
-        schemes: ["mpv", "mpvx"],
+        schemes: ["iit", "iitm"],
     }, // {
         //     urlPrefix: browser.runtime.getURL("/"),
         // },

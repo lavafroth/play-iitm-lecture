@@ -1,15 +1,6 @@
 #!/bin/sh
-# When the addon is installed or updated, there is one last thing to do.
-# To use the extension, run the following commands in your terminal:
-
-set -e
-
-if [ -f mpv-scheme-handler.desktop ]; then
-    cp mpv-scheme-handler.desktop ~/.local/share/applications/mpv-scheme-handler.desktop
-else
-    curl -sSf "https://raw.githubusercontent.com/binarynoise/open-in-mpv/main/mpv-scheme-handler.desktop" >~/.local/share/applications/mpv-scheme-handler.desktop
-fi
-
-xdg-mime default mpv-scheme-handler.desktop x-scheme-handler/mpv
 
 set +e
+
+echo 'W0Rlc2t0b3AgRW50cnldClZlcnNpb249MS4wClR5cGU9QXBwbGljYXRpb24KRXhlYz1zaCAtYyAnVVJMPSIldSI7IFVSTD0ke1VSTCNpaXRtOi8vd2F0Y2gjfTsgbXB2IC0tc3RhcnQ9MDA6MDA6MTQgLS1zcGVlZD0yLjE1IC0tc2NyaXB0LW9wdHM9J3NraXBzaWxlbmNlLWVuYWJsZWQ9eWVzJyAtLWtlZXAtb3BlbiAtLXBsYXllci1vcGVyYXRpb24tbW9kZT1wc2V1ZG8tZ3VpICIke1VSTH0iIHx8IG5vdGlmeS1zZW5kIC1pIG1wdiAtdyAtQSBDbG9zZSAtQSBPcGVuPU9wZW4gIk9wZW5pbmcgJHtVUkx9IGZhaWxlZCIgfCB7IFsgIiQoaGVhZCAtbjEpIiA9ICJPcGVuIiBdICYmIHhkZy1vcGVuICIke1VSTH0iO30nCkljb249bXB2ClN0YXJ0dXBOb3RpZnk9dHJ1ZQpUZXJtaW5hbD1mYWxzZQpNaW1lVHlwZT14LXNjaGVtZS1oYW5kbGVyL2lpdG0KTmFtZT1JSVRNIExhdW5jaGVyCkNvbW1lbnQ9TGF1bmNoIE1QViBmb3IgSUlUTQpIaWRkZW49ZmFsc2UK' | base64 -d > ~/.local/share/applications/iitm-scheme-handler.desktop
+xdg-mime default iitm-scheme-handler.desktop x-scheme-handler/iitm
