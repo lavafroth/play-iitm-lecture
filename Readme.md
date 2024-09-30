@@ -1,28 +1,13 @@
-# open in mpv
+# open IITM lecture in mpv
 
-A minimalist extension to open the current website or a link in mpv.
-You only need to put a .desktop file to `~/.local/share/applications/mpv-scheme-handler.desktop`.
-
-And if you don't have that file installed, you get a shell-script to put it into place.
-No more "nothing happens" and no-one knows why!
-
-Inspired by _Open In mpv_ by Leonardo and _ff2mpv_ by yossarian, which require additional binaries installed but don't tell you when they are missing.
+A fork of the `open-in-mpv` extension to open an IITM lecture in mpv.
+Only tested on linux. Windows users can cope.
 
 ## License
 
 Licensed under the EUPL-1.2-or-later
 
 ## Installation
-
-### Firefox
-
-Go to !release pending! and install the extension
-
-### Discord
-
-Go to !release pending! and install the extension
-
-## Local (development) installation
 
 ### Firefox
 
@@ -37,3 +22,14 @@ Go to !release pending! and install the extension
 3. enable developer mode
 4. click "load unpacked"
 5. select the folder containing this extension.
+
+## First run
+
+On first run, the extension will give you a shell script. You must download and
+run it to register the XDG handler.
+
+### Features
+
+- Skip 14 seconds of intro
+- Normal speed: 2.15x (profs have slow cadence)
+- Speed during areas of silence: 3x
