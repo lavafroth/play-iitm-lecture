@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=sh -c 'URL="%u"; URL=${URL#iitm://watch#}; mpv --start=00:00:14 --speed=2.15 --script-opts='skipsilence-enabled=yes' --keep-open --player-operation-mode=pseudo-gui "${URL}" || notify-send -i mpv -w -A Close -A Open=Open "Opening ${URL} failed" | { [ "$(head -n1)" = "Open" ] && xdg-open "${URL}";}'
+Icon=mpv
+StartupNotify=true
+Terminal=false
+MimeType=x-scheme-handler/iitm
+Name=IITM Launcher
+Comment=Launch MPV for IITM
+Hidden=false

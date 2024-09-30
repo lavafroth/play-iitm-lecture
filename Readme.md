@@ -3,9 +3,11 @@
 A fork of the `open-in-mpv` extension to open an IITM lecture in mpv.
 Only tested on linux. Windows users can cope.
 
-## License
+### Features
 
-Licensed under the EUPL-1.2-or-later
+- Skip 14 seconds of intro
+- Normal speed: 2.15x (profs have slow cadence)
+- Speed during areas of silence: 3x
 
 ## Installation
 
@@ -28,8 +30,15 @@ Licensed under the EUPL-1.2-or-later
 On first run, the extension will give you a shell script. You must download and
 run it to register the XDG handler.
 
-### Features
+> Note: the script uses base64 to avoid quoting issues.
 
-- Skip 14 seconds of intro
-- Normal speed: 2.15x (profs have slow cadence)
-- Speed during areas of silence: 3x
+If you don't trust running random scripts, follow these steps:
+
+- Clone this repo
+- Review the contents of `iitm-scheme-handler.desktop`
+- Copy it to `~/.local/share/applications`
+- Register the XDG handler using `xdg-mime default iitm-scheme-handler.desktop x-scheme-handler/iitm`
+
+## License
+
+Licensed under the EUPL-1.2-or-later
