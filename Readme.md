@@ -34,6 +34,7 @@ run it to register the XDG handler.
 
 If you don't trust running random scripts, follow these steps:
 
+- Save the contents of [this file](https://raw.githubusercontent.com/ferreum/mpv-skipsilence/refs/heads/master/skipsilence.lua) to `~/.config/mpv/scripts/skipsilence.lua`
 - Clone this repo
 - Review the contents of `iitm-scheme-handler.desktop`
 - Copy it to `~/.local/share/applications`
