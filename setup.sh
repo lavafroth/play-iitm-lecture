@@ -1,7 +1,3 @@
-#!/bin/sh
-
-set +e
-
-wget https://raw.githubusercontent.com/ferreum/mpv-skipsilence/refs/heads/master/skipsilence.lua -O ~/.config/mpv/scripts/skipsilence.lua
-echo 'W0Rlc2t0b3AgRW50cnldClZlcnNpb249MS4wClR5cGU9QXBwbGljYXRpb24KRXhlYz1zaCAtYyAnVVJMPSIldSI7IFVSTD0ke1VSTCNpaXRtOi8vd2F0Y2gjfTsgbXB2IC0tc3RhcnQ9MDA6MDA6MTQgLS1zcGVlZD0yLjE1IC0tc2NyaXB0LW9wdHM9J3NraXBzaWxlbmNlLWVuYWJsZWQ9eWVzJyAtLWtlZXAtb3BlbiAtLXBsYXllci1vcGVyYXRpb24tbW9kZT1wc2V1ZG8tZ3VpICIke1VSTH0iIHx8IG5vdGlmeS1zZW5kIC1pIG1wdiAtdyAtQSBDbG9zZSAtQSBPcGVuPU9wZW4gIk9wZW5pbmcgJHtVUkx9IGZhaWxlZCIgfCB7IFsgIiQoaGVhZCAtbjEpIiA9ICJPcGVuIiBdICYmIHhkZy1vcGVuICIke1VSTH0iO30nCkljb249bXB2ClN0YXJ0dXBOb3RpZnk9dHJ1ZQpUZXJtaW5hbD1mYWxzZQpNaW1lVHlwZT14LXNjaGVtZS1oYW5kbGVyL2lpdG0KTmFtZT1JSVRNIExhdW5jaGVyCkNvbW1lbnQ9TGF1bmNoIE1QViBmb3IgSUlUTQpIaWRkZW49ZmFsc2UK' | base64 -d > ~/.local/share/applications/iitm-scheme-handler.desktop
+#!/usr/bin/env bash
+cp iitm-scheme-handler.desktop ~/.local/share/applications/
 xdg-mime default iitm-scheme-handler.desktop x-scheme-handler/iitm
